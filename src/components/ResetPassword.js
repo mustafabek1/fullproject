@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Redirect } from 'react-router';
+import Navbar from './Navbar';
+
 export default class ResetPsasword extends Component {
     state = {};
 
@@ -32,6 +34,8 @@ export default class ResetPsasword extends Component {
             return <Redirect to={'/login'} />
         }
         return (
+            <div>
+                <Navbar/>
             <div className="container">
                 <div className="auth-wrapper">
                     <div className="auth-inner" >
@@ -63,6 +67,7 @@ export default class ResetPsasword extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
 
         )
