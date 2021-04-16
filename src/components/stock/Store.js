@@ -10,37 +10,44 @@ function Store() {
                 <p >Store Information</p>
 
 
-                <table className="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Store Name</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">explanation </th>
-                            <th scope="col">transactions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Hizmet Deposu</th>
-                            <td>istanbul</td>
-                            <td>depo dolu</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Bilgisayar Donanim </th>
-                            <td>istanbul</td>
-                            <td>istanbul depo</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ankara</th>
-                            <td>Ankara Deposu</td>
-                            <td>BOS</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className="card">
+                    <div className="card-body">
 
+
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Store Name</th>
+                                    <th scope="col">Addres</th>
+                                    <th scope="col">explanation</th>
+                                    <th scope="col">operation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hizmet Deposu</td>
+                                    <td>istanbul</td>
+                                    <td>istanbul depo</td>
+                                    <td>    </td>
+                                </tr>
+                                <tr>
+                                    <td>Aankara Deposu </td>
+                                    <td>Ankara</td>
+                                    <td>bos</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Hatay Deposu</td>
+                                    <td>Hatay</td>
+                                    <td>Dolu</td>
+                                    <td> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
 
 
 

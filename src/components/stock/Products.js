@@ -47,36 +47,52 @@ function Products() {
                 <p >Store Information</p>
 
 
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Store Name</th>
-                            <th scope="col">Transactions</th>
-                            <th scope="col">Catagory </th>
-                            <th scope="col">Store</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Hizmet Deposu</th>
-                            <td>istanbul</td>
-                            <td>depo dolu</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Bilgisayar Donanim </th>
-                            <td>istanbul</td>
-                            <td>istanbul depo</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ankara</th>
-                            <td>Ankara Deposu</td>
-                            <td>BOS</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div className="card">
+                    <div className="card-body">
+
+
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">explanation</th>
+                                    <th scope="col">Catagory</th>
+                                    <th scope="col">Store</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IBM M3</td>
+                                    <td></td>
+                                    <td>BILGISAYR</td>
+                                    <td>
+                                      istanbul
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>KDV YUZDE 18 </td>
+                                    <td></td>
+                                    <td>Hizmet</td>
+                                    <td>
+                                       Hatay
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Laptop Batarya</td>
+                                    <td></td>
+                                    <td>Bilgisayar</td>
+                                    <td>
+                                        Ankara
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+
 
             </div>
         </div>

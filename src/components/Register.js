@@ -135,10 +135,7 @@ export default class Register extends Component {
                       onChange={this.handleChange}
 
                     />
-                    {/* {formError.name.length > 0 && (
-                                             <span className="errorMessage">{formErrors.name}</span>
-                                               )} */}
-
+                   
                   </div>
                   <div className="form-group">
 
@@ -148,9 +145,7 @@ export default class Register extends Component {
                       onChange={this.handleChange}
 
                     />
-                    {/* {formError.lastname.length > 0 && (
-                                                  <span className="errorMessage">{formErrors.lastname}</span>
-                                               )} */}
+                  
                   </div>
                   <div className="form-group">
 
