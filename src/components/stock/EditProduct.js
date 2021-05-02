@@ -1,0 +1,93 @@
+import axios from 'axios';
+import React, { Component } from 'react'
+import {Link,} from "react-router-dom";
+
+export default class EditProduct extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state= {
+            products: this.props.history.location.state?.data,
+            id:this.props.history.location.state?.data.id,
+            productName: this.props.history.location.state?.data.productName,
+            explanation: this.props.history.location.state?.data.explanation,
+            catagory: this.props.history.location.state?.data.catagory,
+            store: this.props.history.location.state?.data.store,
+          
+           
+        }
+    }
+    updateUser = (e) => {
+        let product = {
+            id: this.state.id,
+            productName: this.state.productName,
+            explanation: this.state.explanation,
+            catagory: this.state.catagory,
+            store: this.state.store
+            
+        };
+        axios.put("",product)
+       .then(res => {
+            this.props.history.push('/')
+        });
+    
+        e.preventDefault();
+    }
+
+    render() {
+
+        return (
+            <div className="container">
+                <div className="card col-md-6 offset-md-3 offset-md-3">
+                            <h3 className="text-center">Edit Product</h3>
+                            <div className="card-body">
+                                <form>
+                                    <div className="form-group">
+                                       
+                                        <input placeholder="Product Name" productName="name"
+                                               className="form-control"
+                                               value={this.state.productName}
+                                               onChange={(e) => {
+                                                   this.setState({productName: e.target.value})
+                                               }}/>
+                                   </div>
+                                   <div className="form-group">
+                                        
+                                        <input placeholder="Explanation" name="explanation" className="form-control"
+                                               value={this.state.explanation}
+                                               onChange={(e) => {
+                                                   this.setState({explanation: e.target.value})
+                                               }}/>
+                                    </div>
+                                    <div className="form-group">
+                                     
+                                        <input placeholder="Catagory" name="catagory" className="form-control"
+                                               value={this.state.catagory}
+                                               onChange={(e) => {
+                                                   this.setState({catagory: e.target.value})
+                                               }}/>
+                                    </div>
+                                    <div className="form-group">
+                                     
+                                     <input placeholder="Store" name="store" className="form-control"
+                                            value={this.state.store}
+                                            onChange={(e) => {
+                                                this.setState({store: e.target.value})
+                                            }}/>
+                                 </div>
+                                
+                                 <button className="btn btn-success" onClick={this.updateUser}>Save</button>
+                                 <Link to="/products" className="btn btn-danger"
+                                          style={{marginLeft: "10px"}}>vazgec
+                                    </Link>
+                              </form>
+                              
+                          </div> 
+              </div>
+             
+                
+
+            </div>
+        )
+    }
+}

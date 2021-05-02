@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
+import {Link,} from "react-router-dom";
 
 
 
@@ -14,10 +15,12 @@ function Stock() {
         <div>
 
             <Navbar />
+            
             <div className="container">
 
-
+            
                 <div className="row">
+              
                     <div className="col-md-3">
                         <div className="card-counter primary">
                             <i className="fa fa-navicon "></i>
@@ -25,7 +28,8 @@ function Stock() {
                             <span className="count-name">Product</span>
                         </div>
                     </div>
-
+                   
+                     
                     <div className="col-md-3">
                         <div className="card-counter danger">
                             <i className='fa fa-window-restore'></i>

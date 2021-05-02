@@ -12,7 +12,8 @@ import Store from './components/stock/Store';
 import Stock from './components/stock/Stock';
 import Catagory from './components/stock/Catagory';
 import Products from './components/stock/Products';
-
+import AddProduct from './components/stock/AddProduct';
+import EditProduct from './components/stock/EditProduct';
 function App() {
 
   return (
@@ -32,6 +33,9 @@ function App() {
           <Route exact path="/store" component={Store}/>
           <Route exact path="/catagory" component={Catagory}/>
           <Route exact path="/products" component={Products}/>
+          <Route exact path="/addproduct" component={AddProduct}/>
+          <Route exact path="/editproduct" component={EditProduct}/>
+
         </Switch>
        
       </Router>
