@@ -65,7 +65,7 @@ class Store extends Component {
                             {this.state.data.map(product => {
                                         return (
                                             <tr key={product.id}>
-                                                <td>{product.id}</td>
+                                                  <td>{product.id}</td>
                                                 <td>{product.productName}</td>
                                                 <td>{product.explanation}</td>
                                                 <td>{product.catagory}</td>

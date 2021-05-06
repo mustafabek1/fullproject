@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar';
-
+import catagory from '../../db/category';
 
 
 function Catagory() {

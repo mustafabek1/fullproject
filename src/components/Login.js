@@ -5,31 +5,21 @@ import Navbar from './Navbar';
 
 
 
-export default class Login extends Component {
-    state = {};
+export default function Login()  {
+    const [data, setData] = React.useState ({
+        email:"",
+        password:""
 
-    handelsupmit = e => {
-        e.preventDefault();
+    });
 
-        const data = {
-            email: this.email,
-            password: this.password
-        }
+    const handleChange = (prop) => e => {
+        setData({...data, [prop]: e.target.value});
+    };
 
-        axios.post('login', data)
-            .then(res => {
-                localStorage.setItem('token', res.data.token);
-                this.setState({
-                    loggedIn: true
-                });
-                this.props.setUser(res.data.user);
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }
+    // handelsupmit = e => {
+    //     e.preventDefault();        
+    //     }
 
-    render() {
 
 
         return (
@@ -42,17 +32,18 @@ export default class Login extends Component {
                     <div className="auth-wrapper">
                         <div className="auth-inner" >
 
-
                             <h3 className="text-center">Login</h3>
+                        
                             <div className="card-body">
-                                <form onSubmit={this.handelsupmit}>
+                                <form onSubmit>
                                     <div className="form-group">
 
                                         <input
                                             placeholder="Email"
                                             name="email"
                                             className="form-control"
-                                            onChange={this.handleChange}
+                                            value={data.email}
+                                            onChange={handleChange ("email")}
 
                                         />
                                     </div>
@@ -62,11 +53,20 @@ export default class Login extends Component {
                                             placeholder="Password"
                                             name="password"
                                             className="form-control"
-                                            onChange={this.handleChange}
+                                            value={data.password}
+                                            onChange={handleChange ("password")}
 
                                         />
                                     </div>
-                                    <button className="btn btn-success" onClick={this.updateUser}>Login</button>
+                                    <button className="btn btn-success"
+                                    disabled={data.email === "" || data.password === ""}
+                                     onClick={() => {
+                                        
+                                             localStorage.setItem("user",true);
+                                             window.location.href ="/";
+                                    }}
+                                    >
+                                      Login</button>
                                     <p className="forgot-password texet-right">
                                         <Link to={'/forgot'}>Forgot Password</Link>
                                     </p>
@@ -79,5 +79,5 @@ export default class Login extends Component {
             </div>
 
         )
-    }
+    
 }

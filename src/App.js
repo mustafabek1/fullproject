@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/Login';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +14,9 @@ import Catagory from './components/stock/Catagory';
 import Products from './components/stock/Products';
 import AddProduct from './components/stock/AddProduct';
 import EditProduct from './components/stock/EditProduct';
+import Home from './components/stock/Home';
 function App() {
+ 
 
   return (
     <>
@@ -23,13 +25,14 @@ function App() {
       
         
         <Switch>
-
-          <Route path='/' exact component={Navbar} />
+        
+          <Route path='/navbar' component={Navbar} />
           <Route path='/login' component={ Login } />
+          <Route path='/' exact component={ Home } />
           <Route path='/register' component={Register} />
           <Route exact path="/forgot" component={ForgotPassword}/>
           <Route exact path="/resetpassword/:id" component={ResetPassword}/>
-          <Route exact path="/stock" component={Stock}/>
+          {/* <Route exact path="/stock" component={Stock}/> */}
           <Route exact path="/store" component={Store}/>
           <Route exact path="/catagory" component={Catagory}/>
           <Route exact path="/products" component={Products}/>

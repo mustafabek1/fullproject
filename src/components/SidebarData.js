@@ -9,14 +9,10 @@ export const SidebarData = [
     path: '/',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
-    
+     
   },
-  {
-    title: 'Stock',
-    path: '/stock',
-    icon: <IoIcons.IoIosPaper />,
-    cName: 'nav-text'
-  },
+ 
+
   {
     title: 'Store',
     path: '/store',

@@ -19,9 +19,18 @@ function Navbar() {
 
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
+           <div>
+          <Link to="/login" className="btn btn-success"
+           style={{ marginLeft: "10px" }}>Sing in
+          </Link>
+          <Link to="/register" className="btn btn-success"
+                style={{ marginLeft: "10px" }}>Sing up
+          </Link>
+          </div>
+                                    
 
         </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+          <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
@@ -40,6 +49,7 @@ function Navbar() {
             })}
           </ul>
         </nav>
+        
       </IconContext.Provider>
     </>
   );
